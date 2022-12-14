@@ -3,11 +3,14 @@ import Button from 'react-bootstrap/Button';
 
 import Table from './components/Table';
 
-const COLUMNS = ['yaer', 'Day'];
+var currentTime = new Date();
+var year = currentTime.getFullYear() + 1
+
+const COLUMNS = ['西暦', '曜日'];
 const ROWS = [
-  [2023, '土曜日'],
-  [2024, '月曜日'],
-  [2024, '火曜日'],
+  [year, '日曜日'],
+  [year+1, '月曜日'],
+  [year+2, '火曜日'],
 ];
 
 const Todo = ({ todo, toggleTodo }) => {
